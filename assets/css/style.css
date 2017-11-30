@@ -1,40 +1,14 @@
-
 #searchButton {
-   color: darkgrey;
-   background-image: -webkit-gradient(linear, left top, left bottom, from(black)darkorchid);
-   background-image: -webkit-linear-gradient(top, black, darkorchid);
-   background-image: -moz-linear-gradient(top, black, darkorchid);
-   background-image: linear-gradient(to bottom, black, darkorchid); 
+    color: darkgrey;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black)darkorchid);
+    background-image: -webkit-linear-gradient(top, black, darkorchid);
+    background-image: -moz-linear-gradient(top, black, darkorchid);
+    background-image: linear-gradient(to bottom, black, darkorchid);
 }
- #navOne {
- 
+
+#navOne {
     float: right;
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* footer {
