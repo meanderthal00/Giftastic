@@ -18,12 +18,53 @@
     <title>Giftastic</title>
     
     <header>
+           
         
     </header>
 </head>
 
 <body>
+    <container id= "mainContainer">
 
+    <!-- nav bar with the giphy search box -->
+    <!-- TODO:need to get the elements in this div to right justify -->
+    <div class= "row">
+       <div class= "col-xs-12" id ="navOne">
+            <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                    <div class="navbar-header">
+                    
+                        <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-info" id ="searchButton" >Submit</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <!-- link to github -->
+                        <li><a href="https://github.com/meanderthal00">Say Hi on Github</a></li>
+                        </ul>
+                    </div>
+                    </div>
+            </nav>
+        </div>    
+    </div>
+    
+    <!-- columns for content -->
+        <!-- Display area is to the left -->
+        <div class="row">
+            <div class="col-xs-8" id= "displayArea">
+                
+                    <p> .gif display area here</p>
+                
+            </div>
+            <div class="col-xs-4 btn-group-vertical" id= "buttonArea">
+                    <p>BUTTONS HERE</p>
+            </div>
+
+        </div>    
+        <!-- Button area is right justified -->
+</container>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!--JS link here -->
@@ -31,8 +72,8 @@
     
 </body>
 
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="container">
         <span class="text-muted">&copy Ryan J Compton 2017</span>
     </div>
-</footer>
+</footer> -->

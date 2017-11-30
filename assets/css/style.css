@@ -1,3 +1,47 @@
-footer {
-    background: blue;
+
+#searchButton {
+   color: darkgrey;
+   background-image: -webkit-gradient(linear, left top, left bottom, from(black)darkorchid);
+   background-image: -webkit-linear-gradient(top, black, darkorchid);
+   background-image: -moz-linear-gradient(top, black, darkorchid);
+   background-image: linear-gradient(to bottom, black, darkorchid); 
 }
+ #navOne {
+ 
+    float: right;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(lightgrey)black);
+    background-image: -webkit-linear-gradient(top, lightgrey,black);
+    background-image: -moz-linear-gradient(top, lightgrey,black);
+    background-image: linear-gradient(to bottom, lightgrey,black);;
+    text-align: center;
+    color: white;
+} */
