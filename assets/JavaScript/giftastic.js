@@ -11,7 +11,7 @@ var topicArray = ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henr
  
 // page loads with 10 exsisting buttons and search box for user input
     
-    function createButtons(){   
+    function createButtons() {   
 
         //  function to clear exsisting boxes on reload    
         $("#buttonArea").empty();
@@ -20,12 +20,22 @@ var topicArray = ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henr
 
         for ( var i = 0; i < topicArray.length; i++ ) {
             var buttons = $("<button>" + topicArray[i] + "</button>")
+            buttons.addClass("button");
 
             // appending the created buttons to the html
             buttons.prependTo("#buttonArea");
                 
-            };
-    }        createButtons();
+            }
+
+            //  // adding button functionality
+             $(".button").on("click", function() {
+                 console.log( topicArray[i] + "button logged");
+             })
+    }; 
+      createButtons();
+    
+
+    
 
   
 

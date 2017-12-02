@@ -15,8 +15,9 @@ button {
     
 
 }
-/* button:hover{ */
-    /* background-color: #7831a1; */
+#buttonArea { 
+    display:block;
+}
 
 /* } */
 #navOne {
