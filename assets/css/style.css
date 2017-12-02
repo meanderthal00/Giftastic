@@ -1,15 +1,28 @@
-#searchButton {
-    color: darkgrey;
+button {
+    
     background-image: -webkit-gradient(linear, left top, left bottom, from(black)darkorchid);
     background-image: -webkit-linear-gradient(top, black, darkorchid);
     background-image: -moz-linear-gradient(top, black, darkorchid);
     background-image: linear-gradient(to bottom, black, darkorchid);
+   
 }
+#searchButton {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black)darkorchid);
+    background-image: -webkit-linear-gradient(top, black, darkorchid);
+    background-image: -moz-linear-gradient(top, black, darkorchid);
+    background-image: linear-gradient(to bottom, black, darkorchid);
+   }
+/* button:hover{ */
+    /* background-color: #7831a1; */
 
+/* } */
 #navOne {
-    float: right;
+   margin-top: 50px;
+    background: red;
 }
-
+#buttonArea{
+    display: block;
+}
 
 /* footer {
     background-image: -webkit-gradient(linear, left top, left bottom, from(lightgrey)black);
