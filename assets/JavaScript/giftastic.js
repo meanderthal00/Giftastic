@@ -8,6 +8,7 @@ $(function () {
 // create topic variables
 var topicArray = ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henri Matisse", "Claude Monet", "Vermeer", "Frida Kahlo", "Rene Magritte", "Salvador Dalí", "Pablo Picasso"]
 
+
 // attempt at doing it as an object below
 // var topicObject = {
 //         topicArray: ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henri Matisse", "Claude Monet", "Vermeer", "Frida Kahlo", "Rene Magritte", "Salvador Dalí", "Pablo Picasso"],
@@ -42,9 +43,63 @@ var topicArray = ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henr
                 // adding button to html
                 $("#buttonArea").append(buttons);
             }
-        }
+          
+        };
+        createButtons();
 
-        //  // adding button functionality
+    //      // adding button functionality  
+    //     // adding on click to created buttons
+    //         $(".artist").on("click", function() {
+    //             var painter = $(this).attr("data-name")
+
+    //             var queryURL = "https://api.giphy.com/v1/gifs/search";
+
+    //              // AJAX rquest
+    //             $.ajax({
+    //                 url: queryURL,
+    //                 method: "GET",
+    //                 data: {
+    //                 api_key: "wZtZQpZDcla05c5wcbCNYPnygRQoLBYb",
+    //                 limit: 10
+    //                 }
+    //              })
+            
+    //                 // data returned from API
+    //             .done(function(response) {
+    //             // results variable
+    //             var results = response.data;
+
+    //             // looping the returned results
+    //             for (var i = 0, len = results.length; i < len; i++){
+    //                 // checking the rating of the returned results
+    //                 if (results[i].rating !== "r"){
+
+    //                     // creating the div for the gifs
+    //                     var gifDiv = $("<div>").addClass("item");
+                        
+    //                     // storing the gif's rating
+    //                     var rating = results[i].rating;
+
+    //                     // adding the p for the ratings to be displayed in
+    //                     var ratingP = $("<p>").text("Rating " + rating);
+
+    //                     // adding the image tag
+    //                     var painterImage = $("<img>");
+
+    //                     // giving the above var an appropriate src (from the data pulled from the API)
+    //                     painterImage.attr("src", results[i].images.fixed_height.url);
+    //                     // appending the images and ratings to the created div
+    //                     gifDiv.append(ratingP);
+    //                     gifDiv.append(painterImage);
+
+    //                     // prepending the created div to the hard coded html div
+    //                     $("#displayArea").prepend(gifDiv);
+
+
+                        
+    //                 }
+    //             }  
+    //         })
 
         $("#searchButton").on("click", function (event) {
 
@@ -63,7 +118,9 @@ var topicArray = ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henr
 
 
         });
-
+    // });    
+    // createButtons();
+       
 
 
 
@@ -93,4 +150,4 @@ var topicArray = ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henr
         // });
 
         // create a function that takes each topic in the array and remakes the     buttons on the page prepending the user values to the list
-        createButtons();
+    
