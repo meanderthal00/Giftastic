@@ -58,8 +58,8 @@ var topicArray = ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henr
 
             createButtons();
 
-            // TODO: find out how to clear the input after submitting
-            $("#artInput").empty();
+            // clears the input after submitting
+            $("#artInput").val("");
 
 
         });
