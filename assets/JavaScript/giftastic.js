@@ -42,6 +42,7 @@ function createButtons() {
         buttons.text(topicArray[i]);
         // adding button to html
         $("#buttonArea").append(buttons);
+        console.log(buttons);
     }
 
 };
@@ -52,20 +53,17 @@ createButtons();
 // $(".artist").on("click", function () {
 //     var painter = $(this).attr("data-name")
 
-//     var queryURL = "https://api.giphy.com/v1/gifs/search";
+//     var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ giphyName + "& rating=pg&api_key=wZtZQpZDcla05c5wcbCNYPnygRQoLBYb&limit=10";
 
 //     // AJAX rquest
 //     $.ajax({
 //             url: queryURL,
 //             method: "GET",
-//             data: {
-//                 api_key: "wZtZQpZDcla05c5wcbCNYPnygRQoLBYb",
-//                 limit: 10
-//             }
 //         })
 
 //         // data returned from API
 //         .done(function (response) {
+//             $("#displayArea").empty();
 //             // results variable
 //             var results = response.data;
 
@@ -150,3 +148,12 @@ createButtons();
 // });
 
 // create a function that takes each topic in the array and remakes the     buttons on the page prepending the user values to the list
+
+// ================================================================
+// DISCUSSION TOPICS
+// ================================================================
+
+// 1. are my code blocks in the right order?
+// 2. What is causeing my buttons to dissapear when I uncomment the functional part of my code (see the double red dots)?
+// 3. Why arent my gifs showing up at all?
+// 4. what attributes should I be adding to the created buttons?
