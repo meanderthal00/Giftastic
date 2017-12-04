@@ -154,6 +154,6 @@ createButtons();
 // ================================================================
 
 // 1. are my code blocks in the right order?
-// 2. What is causeing my buttons to dissapear when I uncomment the functional part of my code (see the double red dots)?
+// 2. What is causing my buttons to dissapear when I uncomment the functional part of my code (see the double red dots)?
 // 3. Why arent my gifs showing up at all?
 // 4. what attributes should I be adding to the created buttons?
