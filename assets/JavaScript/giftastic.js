@@ -1,9 +1,9 @@
-$(function () {
+// $(function () {
     // testing path
-    console.log("I work");
+    // console.log("I work");
     // API KEY: wZtZQpZDcla05c5wcbCNYPnygRQoLBYb
 
-});
+// });
 
 // create topic variables
 var topicArray = ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henri Matisse", "Claude Monet", "Vermeer", "Frida Kahlo", "Rene Magritte", "Salvador Dalí", "Pablo Picasso"]
@@ -46,58 +46,62 @@ function createButtons() {
     }
 
 };
+$(document).ready(function(){
 createButtons();
-
+})
 // adding button functionality  
 // adding on click to created buttons
-// $(".artist").on("click", function () {
-//     var painter = $(this).attr("data-name")
 
-//     var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ giphyName + "& rating=pg&api_key=wZtZQpZDcla05c5wcbCNYPnygRQoLBYb&limit=10";
+$(document).on("click", ".artist", function () {
+    var painter = $(this).attr("data-name")
+    console.log(painter);
 
-//     // AJAX rquest
-//     $.ajax({
-//             url: queryURL,
-//             method: "GET",
-//         })
+    var queryURL = "https://api.giphy.com/v1/gifs/search?"+ painter + "& rating=pg&api_key=wZtZQpZDcla05c5wcbCNYPnygRQoLBYb&limit=10";
 
-//         // data returned from API
-//         .done(function (response) {
-//             $("#displayArea").empty();
-//             // results variable
-//             var results = response.data;
+    // AJAX rquest
+    // $.ajax({
+    //         url: queryURL,
+    //         method: "GET",
+    //     })
 
-//             // looping the returned results
-//             for (var i = 0, len = results.length; i < len; i++) {
-//                 // checking the rating of the returned results
-//                 if (results[i].rating !== "r") {
+    //     // data returned from API
+    //     .done(function (response) {
+    //         $("#displayArea").empty();
+    //         // results variable
+    //         var results = response.data;
 
-//                     // creating the div for the gifs
-//                     var gifDiv = $("<div>").addClass("item");
+    //         // looping the returned results
+    //         for (var i = 0, len = results.length; i < len; i++) {
+    //             // checking the rating of the returned results
+    //             if (results[i].rating !== "r") {
 
-//                     // storing the gif's rating
-//                     var rating = results[i].rating;
+    //                 // creating the div for the gifs
+    //                 var gifDiv = $("<div>").addClass("item");
 
-//                     // adding the p for the ratings to be displayed in
-//                     var ratingP = $("<p>").text("Rating " + rating);
+    //                 // storing the gif's rating
+    //                 var rating = results[i].rating;
 
-//                     // adding the image tag
-//                     var painterImage = $("<img>");
+    //                 // adding the p for the ratings to be displayed in
+    //                 var ratingP = $("<p>").text("Rating " + rating);
 
-//                     // giving the above var an appropriate src (from the data pulled from the API)
-//                     painterImage.attr("src", results[i].images.fixed_height.url);
-//                     // appending the images and ratings to the created div
-//                     gifDiv.append(ratingP);
-//                     gifDiv.append(painterImage);
+    //                 // adding the image tag
+    //                 var painterImage = $("<img>");
 
-//                     // prepending the created div to the hard coded html div
-//                     $("#displayArea").prepend(gifDiv);
+    //                 // giving the above var an appropriate src (from the data pulled from the API)
+    //                 painterImage.attr("src", results[i].images.fixed_height.url);
+    //                 // appending the images and ratings to the created div
+    //                 gifDiv.append(ratingP);
+    //                 gifDiv.append(painterImage);
+
+    //                 // prepending the created div to the hard coded html div
+    //                 $("#displayArea").prepend(gifDiv);
 
 
 
-//                 }
-//             }
-//         })
+    //             }
+    //         }
+
+        })
 
     $("#searchButton").on("click", function (event) {
 
@@ -116,7 +120,7 @@ createButtons();
 
 
     });
-// });
+
 // createButtons();
 
 
