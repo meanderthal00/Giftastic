@@ -37,7 +37,7 @@ function createButtons() {
         buttons.addClass("artist");
 
         // adding Data attribute
-        buttons.addClass("data-name", topicArray[i]);
+        buttons.attr("data-name", topicArray[i]);
         // adding text with value of the i var
         buttons.text(topicArray[i]);
         // adding button to html
@@ -54,52 +54,53 @@ createButtons();
 
 $(document).on("click", ".artist", function () {
     var painter = $(this).attr("data-name")
+    
+
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ painter + "& rating=pg&api_key=wZtZQpZDcla05c5wcbCNYPnygRQoLBYb&limit=10";
     console.log(painter);
-
-    var queryURL = "https://api.giphy.com/v1/gifs/search?"+ painter + "& rating=pg&api_key=wZtZQpZDcla05c5wcbCNYPnygRQoLBYb&limit=10";
-
     // AJAX rquest
-    // $.ajax({
-    //         url: queryURL,
-    //         method: "GET",
-    //     })
+    $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
 
-    //     // data returned from API
-    //     .done(function (response) {
-    //         $("#displayArea").empty();
-    //         // results variable
-    //         var results = response.data;
+        // data returned from API
+        .done(function (response) {
+            $("#displayArea").empty();
+            console.log(response);
+            // results variable
+            var results = response.data;
 
-    //         // looping the returned results
-    //         for (var i = 0, len = results.length; i < len; i++) {
-    //             // checking the rating of the returned results
-    //             if (results[i].rating !== "r") {
+            // looping the returned results
+            for (var i = 0, len = results.length; i < len; i++) {
+                // checking the rating of the returned results
+                if (results[i].rating !== "r") {
 
-    //                 // creating the div for the gifs
-    //                 var gifDiv = $("<div>").addClass("item");
+                    // creating the div for the gifs
+                    var gifDiv = $("<div>").addClass("item");
 
-    //                 // storing the gif's rating
-    //                 var rating = results[i].rating;
+                    // storing the gif's rating
+                    var rating = results[i].rating;
 
-    //                 // adding the p for the ratings to be displayed in
-    //                 var ratingP = $("<p>").text("Rating " + rating);
+                    // adding the p for the ratings to be displayed in
+                    var ratingP = $("<p>").text("Rating " + rating);
 
-    //                 // adding the image tag
-    //                 var painterImage = $("<img>");
+                    // adding the image tag
+                    var painterImage = $("<img>");
 
-    //                 // giving the above var an appropriate src (from the data pulled from the API)
-    //                 painterImage.attr("src", results[i].images.fixed_height.url);
-    //                 // appending the images and ratings to the created div
-    //                 gifDiv.append(ratingP);
-    //                 gifDiv.append(painterImage);
+                    // giving the above var an appropriate src (from the data pulled from the API)
+                    painterImage.attr("src", results[i].images.fixed_height.url);
+                    // appending the images and ratings to the created div
+                    gifDiv.append(ratingP);
+                    gifDiv.append(painterImage);
 
-    //                 // prepending the created div to the hard coded html div
-    //                 $("#displayArea").prepend(gifDiv);
+                    // prepending the created div to the hard coded html div
+                    $("#displayArea").prepend(gifDiv);
 
 
-
-    //             }
-    //         }
+                }
+            }
+        })
 
         })
 
@@ -117,9 +118,10 @@ $(document).on("click", ".artist", function () {
 
         // clears the input after submitting
         $("#artInput").val("");
-
-
     });
+
+
+    
 
 // createButtons();
 
