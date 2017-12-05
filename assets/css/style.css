@@ -16,7 +16,7 @@ button {
 
 }
 /* #buttonArea { 
-    display:block;
+    display: inline-block;
 } */
 
 /* } */
@@ -25,9 +25,8 @@ button {
     background: red;
     
 }
-/* #buttonArea{
-    display: block;
-} */
+
+
 
 /* footer {
     background-image: -webkit-gradient(linear, left top, left bottom, from(lightgrey)black);
