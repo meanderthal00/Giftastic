@@ -130,24 +130,38 @@ $(document).on("click", ".artist", function () {
 
             }
 
-            $("#searchButton").on("click", function (event) {
 
-                // preventing the page reset
-                event.preventDefault();
-
-                // grabbing the text from the #artInput text box
-                var userArtist = $("#artInput").val().trim();
-                // pushing user input to the array
-                topicArray.push(userArtist);
-
-
-
-                // clears the input after submitting
-                $("#artInput").val("");
-                createButtons();
-            });
         });
+
+
 });
+
+$("#searchButton").on("click", function (event) {
+
+    console.log("searchButton click");
+    // preventing the page reset
+    event.preventDefault();
+
+    // grabbing the text from the #artInput text box
+    var userArtist = $("#artInput").val().trim();
+    // pushing user input to the array if there is a value entered
+    if (userArtist) {
+
+        topicArray.push(userArtist);
+    
+
+
+     // clears the input after submitting and sets focus on the txt box
+        $("#artInput").val("").focus();
+        createButtons();
+    }
+});
+
+$(document).ready(function(){ 
+createButtons();
+});
+
+
 
 
 
