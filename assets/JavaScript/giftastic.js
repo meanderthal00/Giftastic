@@ -107,25 +107,25 @@ $(document).on("click", ".artist", function () {
                     //     $("#displayArea").append("<div class= 'container-fluid'><img class ='gif' src'" + stillImage + "'data-animate ='" + activeImage + "'data-still='" + stillImage + "'></div>");
 
                     //     // adding the pause feature to the gifs 
-                    $(".gif").on("click", function () {
-                        var state = $(this).attr("data-state")
-                        console.log("my state is " + state);
+                    // $(".gif").on("click", function () {
+                    //     var state = $(this).attr("data-state")
+                    //     console.log("my state is " + state);
 
-                        if (state === "still") {
-                            console.log("Stillness");
-                            $(this).attr("src", $(this).attr("data-animate"));
-                            $(this).attr("data-state", "animate");
+                    //     if (state === "still") {
+                    //         console.log("Stillness");
+                    //         $(this).attr("src", $(this).attr("data-animate"));
+                    //         $(this).attr("data-state", "animate");
 
-                        } else {
-                            $(this).attr("src", $(this).attr("data-still"));
-                            $(this).attr("data-state", "still");
-                        }
+                    //     } else {
+                    //         $(this).attr("src", $(this).attr("data-still"));
+                    //         $(this).attr("data-state", "still");
+                    //     }
 
 
 
-                        //     });
+                    //     //     });
 
-                    })
+                    // })
                 };
 
             }
