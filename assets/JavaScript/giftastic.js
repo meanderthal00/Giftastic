@@ -6,7 +6,7 @@
 // });
 
 // create topic variables
-var topicArray = ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henri Matisse", "Claude Monet", "Vermeer", "Frida Kahlo", "Rene Magritte", "Salvador Dalí", "Pablo Picasso"]
+var topicArray = ["Leonardo Da Vinci", "Gustav Klimt", "Vincent van Gogh", "Henri Matisse", "Claude Monet", "Vermeer", "Frida Kahlo", "Rene Magritte", "Salvador Dalí", "Pablo Picasso", "Banksy"]
 
 
 // attempt at doing it as an object below
@@ -98,34 +98,24 @@ $(document).on("click", ".artist", function () {
                                 // prepending the created div to the hard coded html div
                                 $("#displayArea").prepend(gifDiv);
 
-                                // working out the on click for pausing the imgs
-                                // for (var i = 0; i < response.data.length; i++) {
-                                //     var activeImage = response.data[i].images.fixed_height.url;
-                                //     var stillImage = response.data[i].images.fixed_height.url;
-                                //     var rating = response.data[i].rating.toUpperCase();
-
-                                //     $("#displayArea").append("<div class= 'container-fluid'><img class ='gif' src'" + stillImage + "'data-animate ='" + activeImage + "'data-still='" + stillImage + "'></div>");
-
-                                //     // adding the pause feature to the gifs 
-                                //     $(".gif").on("click", function () {
-                                //         var state = $("<img>").attr("data-state")
-                                //         console.log("my state is " + state);
-
-                                //         if (state === "still") {
-                                //             console.log("Stillness");
-                                //             $("<img>").attr("src", $("<img>").attr("data-animate"));
-                                //             $("<img>").attr("data-state", "animate");
-
-                                //         } else {
-                                //             $("<img>").attr("src", $("<img>").attr("data-still"));
-                                //             $("<img>").attr("data-state", "still");
-                               //         }
-                                //     })
-                                // };
+                               
 
                             }
 
+                                    $(".gif").on("click", function () {
+                                        var state = $("<img>").attr("data-still");
+                                        console.log("my state is " + state);
 
+                                        if (state === "still") {
+                                            console.log("Stillness");
+                                            $("<img>").attr("src", $("<img>").attr("data-animate"));
+                                            $("<img>").attr("data-state", "animate");
+
+                                        } else {
+                                            $("<img>").attr("src", $("<img>").attr("data-still"));
+                                            $("<img>").attr("data-state", "still");
+                                       }
+                                    })
                         };
 
 
@@ -140,8 +130,7 @@ $(document).on("click", ".artist", function () {
             // grabbing the text from the #artInput text box
             var userArtist = $("#artInput").val().trim();
             // pushing user input to the array if there is a value entered
-            if (userArtist) {
-
+           
                 topicArray.push(userArtist);
 
 
@@ -149,52 +138,33 @@ $(document).on("click", ".artist", function () {
                 // clears the input after submitting and sets focus on the txt box
                 $("#artInput").val("").focus();
                 createButtons();
-            }
+           
         });
 
         $(document).ready(function () {
             createButtons();
         });
+        //  NOTE===============================================================================
         // if no images have been pulled up, then the add button function does nothing, after a button has been clicked, then it works fine.
-
+        // ======================================================================================
     });
 
-
-
-
-
-
-
-        // createButtons();
-
-
-
-
-
-
-
-
-        // buttons link to giphy to pull 10 gifs for the selected topic
-        // gifs are displayed in a grid in the appropriate div (#"displayArea")
+        // XX buttons link to giphy to pull 10 gifs for the selected topic  
+        // XX gifs are displayed in a grid in the appropriate div (#"displayArea")
         // initally the gif should be static
         // upon clicking the gif should animate
         // another click stops the animation
 
 
-        // Below each gif must also display the following:
-        // its rating provided by the GIPHY API
+        // XX each gif must also display the following:
+        // XXits rating provided by the GIPHY API
 
         //COMPLETE THE ABOVE STEPS BEFORE CONTIUING TO THE NEXT STEPS 
 
-        //   create a form that takes the value from user input and adds it to the "gifTopic" array
+        //XX create a form that takes the value from user input and adds it to the "gifTopic" array
 
-        // $(".form-group").on("click", function(event) {
-        //     var artist = $("#artInput").val.trim();
-        //     topicArray.push(artist);
+       
 
-
-        // });
-
-        // create a function that takes each topic in the array and remakes the     buttons on the page prepending the user values to the list
+        // XX create a function that takes each topic in the array and remakes the     buttons on the page prepending the user values to the list
 
         
