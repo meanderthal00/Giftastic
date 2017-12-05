@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/laughing.jpeg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/palette.png">
     <!-- google font link -->
     <!-- <link href="https://fonts.googleapis.com/css?family=###" rel="stylesheet"> -->
     <!-- css link-->
@@ -29,10 +29,10 @@
         <!-- nav bar with the giphy search box -->
         <!-- TODO:need to get the elements in this div to right justify -->
         <div class="row">
-            <div class="col-xs-12" id="navOne">
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
+            <div class="col-xs-12" >
+                <nav class="navbar navbar-default" id="topSpot">
+                    <div class="container-fluid" >
+                        <div class="navbar-header" id="navOne">
 
                             <form class="navbar-form navbar-left" role="search">
                                 <div class="form-group">
@@ -55,18 +55,27 @@
 
         <!-- columns for content -->
         <!-- Display area is to the left -->
+        <div class= "row">
+                    <div class= "col-xs-8"></div>
+
+                    <!-- Button area is right justified -->
+
+                    <div class="col-xs-4" id="buttonArea">
+                        <p>BUTTONS HERE</p>
+                    </div>
+
+                </div>
+
         <div class="row">
-            <div class="col-xs-8" id="displayArea">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-9" id="displayArea">
 
                 <p> .gif display area here</p>
 
             </div>
-            <!-- Button area is right justified -->
-            <div class="col-xs-4" id="buttonArea">
-                <p>BUTTONS HERE</p>
-            </div>
-
+            <div class="col-xs-1"></div>
         </div>
+        
 
     </container>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
